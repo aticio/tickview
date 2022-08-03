@@ -41,6 +41,7 @@ def on_open(w_s):
 
 
 def on_message(w_s, message):
+    # Test commit
     ticker_data = json.loads(message)
     sequence = []
     for t in ticker_data:
