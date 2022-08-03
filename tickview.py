@@ -17,7 +17,6 @@ def main():
 
 # Websocket functions
 def init_stream():
-    websocket.enableTrace(True)
     w_s = websocket.WebSocketApp(
         "wss://stream.binance.com:9443/ws/!miniTicker@arr",
         on_message=on_message,

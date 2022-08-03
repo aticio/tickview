@@ -18,7 +18,7 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.AWS_HOST }}
           REMOTE_USER: ${{ secrets.AWS_USER }}
-          TARGET: "/opt/one-tracker"
+          TARGET: "/opt/tickview"
       - name: start app
         uses: appleboy/ssh-action@master
         with:
@@ -27,4 +27,4 @@ jobs:
           key: ${{ secrets.AWS_SSH_KEY }}
           port: 22
           script: |
-            sh /opt/one-tracker/appstart.sh
+            sh /opt/tickview/appstart.sh
